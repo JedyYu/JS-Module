@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<h1>命名冲突</h1>
+	
+	<script type="text/javascript"> 
+		var age=10;
+		document.write("age_outside:"+age+"<br>");
+		print_age();
+		document.write("age_outside_after_function:"+age+"<br>");
+
+		function print_age(){
+			age=20;
+			document.write("age_in_functon:"+age+"<br>")
+		}
+	</script>
+</head>

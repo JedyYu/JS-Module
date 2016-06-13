@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<h1>用对象建立命名空间</h1>
+	
+	<script type="text/javascript"> 
+		var age=10;
+
+		var inside={
+			age:20,
+			print_age:function(){
+				document.write("inside.age(call from inside):"+inside.age+"<br>");
+				document.write("age(call from inside):"+age+"<br>");
+			}
+		}
+
+		inside.print_age();
+		document.write("inside.age(call from outside):"+inside.age+"<br>");
+		document.write("age(call from outside):"+age+"<br>");
+		
+		inside.age=30;
+		document.write("inside.age(changed from outside):"+inside.age+"<br>");
+
+	</script>
+</head>

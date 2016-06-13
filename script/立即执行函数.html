@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<h1>立即执行函数</h1>	
+	<script type="text/javascript"> 
+		var age=10;
+
+		var inside=(function (){
+			var age=20;
+			var print_age=function(){
+				document.write("age(call from inside):"+age+"<br>");
+			}
+			return print_age
+		})()
+		inside();
+		document.write("age(call from outside):"+age+"<br>");
+		document.write("age(call from outside):"+inside.age+"<br>");
+	</script>
+</head>
